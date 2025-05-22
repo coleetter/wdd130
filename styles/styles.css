@@ -1,29 +1,37 @@
-:root {
-    --heading-bg-color: rgb(0 0 139);
-    --aside-bg-color: #eee;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}:root {
+    --heading-bg-color: rgb(71, 110, 63);
+    --aside-bg-color: #0000001a;
     --border-color: rgb(0 0 0);
     --margin-size: 1rem;
 }
+body {
+    background-color: rgb(252, 239, 222);
+}
 nav {
     background-color: var(--heading-bg-color);
-    padding: 10px;  
+    padding: 10px;
 }
 nav a {
-    color: var(--aside-bg-color);
+    color: rgb(252, 239, 222);
     display: block;
-    padding: 20px;
+    padding: 10px;
 }
 h1 {
     margin: var(--margin-size);
     color: var(--heading-bg-color);
 }
 main img {
-    width: 150px;
+    width: 200px;
     height: auto;
     margin: 0 var(--margin-size);
     border: 1px solid var(--border-color);
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    float: right;
 }
 p {
     padding: 0;
@@ -33,20 +41,32 @@ main {
     max-width: 840px;
 }
 aside {
-    width: 20rem;
-    margin: var(--margin-size);
-    border: 2px solid var(--border-color);
-    padding: 1rem;
-    background-color: var(--aside-bg-color);
-    color: #333;
+    width: 28rem;
     text-align: center;
+    position: relative;
 }
 aside img {
-    width: 200px;
+    width: 400px;
     height: auto;
+    border-radius: 10px;
+}
+aside h2 {
+    position: absolute;
+    top: 2rem;
+    left: 10rem
 }
 footer {
     margin-top: 2rem;
     border-top: 1px dotted var(--border-color);
     text-align: center;
+}
+/* Class Selectors */
+.box {
+    width: 28rem;
+    list-style-type: none;
+    border: 2px solid var(--border-color);
+    background-color: var(--aside-bg-color);
+    color: #333;
+    margin: var(--margin-size);
+    padding: var(--margin-size);
 }
