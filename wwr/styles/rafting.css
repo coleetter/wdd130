@@ -1,4 +1,5 @@
 :root {
+    /* Define style variables for easy theme management */
     --primary-color: #567b88; /*Slate Gray*/
     --secondary-color: #749c75; /*Asparagus*/
     --accent1-color: #fff8ee; /*Floral White*/
@@ -7,63 +8,192 @@
     --body-font: "Itim", sans-serif;
 }
 *{
+    /* Universal formating */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--accent1-color);
 }
 body{
+    /* Sets the body font and color */
     font-family: var(--body-font);
     color: var(--primary-color);
 }
 header, main, footer {
-    width: 840px;
+    /* Sets width of content areas */
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding-top: 10px;
 }
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
 nav, p, section, article {
+    /* Sets the width of navigation, paragraphs, sections, and articles */
     margin: 16px;
     padding: 8px;
 }
-.socialmedia a {
-    text-decoration: none;
+header {
+    /* Aligns logo and navigation horizontally by using a grid layout */
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    justify-items: right;
+}
+.navigation {
+    /* Styles the navigation bar */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.navigation li {
+    /* Styles the list items in the navigation */
+    flex: 1 1 auto;
+}
+.navigation a {
+    /* Styles the links in the navigation */
+    text-transform: uppercase;
+	display: block;
+	color: var(--primary-color);
+	padding: 20px;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+.navigation a:hover {
+    /* Changes the link color on hover */
+    color: var(--secondary-color);
+	color: var(--accent2-color);
+	font-weight: 700;
+	text-decoration: underline;
+    background-color: #7f6f621e;
+}
+h1, h2 {
+    /* Styles the headings */
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+h2 {
+    /* Styles the secondary headings */
+    font-size: 2rem;
+    text-align: center;
 }
 .hero {
+    /* Determines the behavior of the hero section */
     position: relative;
+    overflow: hidden;
 }
 .hero img {
+    /* Determines the behavior of the hero image */
     display: block;
-    width: 125%;
-    height: auto;
+    width: min-content;
 }
 .hero h1 {
+    /* Styles the company name in the hero section */
     position: absolute;
     top: 20px;
     left: 0;
     padding: 16px;
-    width: 125%;
+    width: 100%;
     text-align: center;
-    opacity: 0.8;
-    background-color: var(--accent2-color);
-    color: #fff;
+    font-size: 3rem;
+    background-color: #7f6f62d8;
+    color: var(--accent1-color);
 }
 article {
+    /* Styles the article in the hero section */
     position: absolute;
-    left: 50%;
-    top: 400px;
+    right: 0;
+    top: 200px;
     padding: 16px;
-    width: 75%;
+    width: 800px;
     text-align: center;
-    background-color: var(--primary-color);
-    opacity: 0.8;
-    color: #fff;
+    background-color: #567b88d8;
     margin: 0;
 }
+article p {
+    /* Styles the paragraphs in the article */
+    background-color: #567b8800;
+    color: var(--accent1-color);
+}
 .hero article img {
+    /* Styles the images in the hero article */
     float: right;
     width: 100px;
+    margin-left: 16px;
+    border-radius: 1rem;
+}
+.history {
+    /* Styles the history section */
+    display: grid;
+    grid-template: 50px auto / 2fr 1fr 2fr;
+    padding: 16px;
+}
+.history h2 {
+    /* Styles the images in the history section */
+    grid-column: 1 / 4;
+    text-align: center;
+    border-bottom-style: solid;
+}
+.history img {
+    /* Styles the images in the history section */
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+.history p {
+    /* Styles the paragraphs in the history section */
+    text-indent: 30px;
+    font-size: 1.2rem;
+    padding: 0;
+    margin-top: 0
+}
+.gallery {
+    /* Styles the adventure section */
+    display: grid;
+    grid-template: 50px 1fr auto/ repeat(5, 1fr);
+    gap: 16px;
+}
+.gallery h2 {
+    /* Styles the heading in the adventure section */
+    grid-column: 1 / 6;
+    text-align: center;
+    border-bottom-style: solid;
+}
+.gallery figure {
+    /* Styles the figure in the adventure section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.gallery figure img {
+    /* Styles the images in the adventure section */
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    justify-self: center;
+    align-self: center;
+}
+footer {
+    /* Styles the footer*/
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.copyright {
+    /* Positions the copyright text */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.socialmedia {
+    display: flex;
+    gap: 10px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    padding: 2px;
 }
