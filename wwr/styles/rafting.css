@@ -84,6 +84,7 @@ h2 {
     /* Determines the behavior of the hero image */
     display: block;
     width: min-content;
+    filter: brightness(90%);
 }
 .hero h1 {
     /* Styles the company name in the hero section */
@@ -196,4 +197,102 @@ footer {
 .socialmedia a {
     text-decoration: none;
     padding: 2px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+    padding: 16px;
+}
+.contact-info h2 {
+    grid-column: 1 / 4;
+    text-align: center;
+    border-bottom-style: solid;
+}
+.contact-info h3{
+    padding: 0;
+    font-size: 1.7rem;
+    align-self:end;
+}
+.contact-info p {
+    padding: 0;
+    align-self: start;
+}
+.contact-info iframe {
+    width: 100%;
+    height: 100%;
+    grid-row: 2 / 7;
+    grid-column: 3 / 4;
+    padding-top: 16px;
+    border: none;
+    border-radius: 4rem;
+}
+.contact-info section {
+    padding: 9px;
+    padding-left: 18px;
+    margin: 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: left;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background-color: var(--accent1-color);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px #00000059;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+.contact-form legend {
+    font-size: 1.5rem;
+    padding: 8px;
+}
+.contact-form label {
+    font-family: var(--body-font);
+    color: var(--primary-color);;
+    padding-left: 8px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: var(--primary-color);
+}
+.contact-form textarea {
+    margin: 16px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+.contact-form button,
+.contact-form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.contact-form button:hover,
+.contact-form input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
 }
