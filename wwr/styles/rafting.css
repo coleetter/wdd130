@@ -234,8 +234,6 @@ footer {
     gap: 10px;
     display: flex;
     flex-direction: row;
-    align-items: top;
-    justify-content: left;
 }
 .contact-form {
     display: flex;
